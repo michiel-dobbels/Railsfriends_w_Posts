@@ -1,0 +1,14 @@
+<div class="container mt-4">
+  <h1 class="mb-4 fw-bold text-success">Create New Post</h1>
+
+  <div class="card shadow-sm p-4">
+    <%= form_with model: @post, local: true do |form| %>
+      <div class="mb-3">
+        <%= form.label :content, class: "form-label fw-semibold" %>
+        <%= form.text_area :content, class: "form-control", rows: 4, placeholder: "What's on your mind?" %>
+      </div>
+
+      <%= form.submit "Post", class: "btn btn-success fw-semibold" %>
+    <% end %>
+  </div>
+</div>
